@@ -1,15 +1,8 @@
+
 #include <iomanip>
 #include <iostream>
 #include <stdio.h>
 using namespace std;
-
-float LamTron(float x)
-{
-    int s = x*1000.0+0.001;
-    if (s/)
-    cout << s;
-    return s;
-}
 
 struct SinhVien {
     char MASV[10];
@@ -36,18 +29,17 @@ void Xuat(SinhVien x)
     cout << x.MASV << "\t";
     cout << x.HoTen << "\t";
     cout << x.NgaySinh << "\t";
-    cout << x.NgaySinh << "\t";
     cout << x.GioiTinh << "\t";
     cout << x.DiemToan << "\t";
     cout << x.DiemLy << "\t"; 
-    cout << x.DiemHoa << "\t" << x.DTB;   
+    cout << x.DiemHoa << "\t" << setprecision(3) << x.DTB;   
+//    cout << "\n07520111	Nguyen Anh Hong	07/12/1991	F	8	9	7	8";
 }
 
-int main()
-{
+
+int main() {
     SinhVien A;
     Nhap(A);
     Xuat(A);
     return 0;
 }
-
